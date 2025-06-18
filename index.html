@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QuantumSpace</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="stars"></canvas>
+
+  <header>
+    <div class="logo-area">
+      <img src="favicon.png" alt="Logo" class="logo" />
+      <span class="site-title">QuantumSpace</span>
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Games</a></li>
+        <li><a href="#">About</a></li>
+        <li>
+          <select id="langSelect">
+            <option value="en">EN</option>
+            <option value="ru">RU</option>
+            <option value="fr">FR</option>
+          </select>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1 class="main-heading">Welcome to QuantumSpace</h1>
+    <p class="subtitle">A galaxy of unfiltered games by Vahe Ghazaryan</p>
+  </main>
+
+  <div class="admin-panel" id="adminPanel">
+    <h2>Admin Panel</h2>
+    <p>Admin-only features go here.</p>
+    <button class="admin-close" onclick="closeAdmin()">Close</button>
+  </div>
+
+  <!-- AdBlock Overlay -->
+  <div id="adblock-overlay">
+    <div class="adblock-content">
+      <h1>😢 AdBlock is enabled / AdBlock включен / AdBlock est activé</h1>
+      <p>
+        <strong>EN:</strong> Please disable your ad blocker to continue using the site.<br>
+        <strong>RU:</strong> Пожалуйста, отключите блокировщик рекламы, чтобы продолжить использовать сайт.<br>
+        <strong>FR:</strong> Veuillez désactiver votre bloqueur de publicité pour continuer à utiliser le site.
+      </p>
+    </div>
+  </div>
+
+  <script src="stars.js"></script>
+  <script src="admin.js"></script>
+  <script src="lang.js"></script>
+  <!--
+  <script> 
+    // Проверка на наличие элементов, которые блокируются AdBlock
+    //function checkAdBlock() {
+      const adElement = document.createElement('div');
+      adElement.className = 'adsbox';
+      document.body.appendChild(adElement);
+      
+      // Если блокировщик рекламы работает, то блокируется этот элемент
+      setTimeout(() => {
+        if (adElement.offsetHeight === 0) {
+          document.getElementById('adblock-overlay').style.display = 'flex';
+          document.body.style.overflow = 'hidden';
+        }
+        adElement.remove();
+      }, 100);
+    
+
+    // Проверка на включенный блокировщик рекламы при загрузке страницы
+    window.onload = checkAdBlock;
+  </script>
+</body>
+</html>
+-->
